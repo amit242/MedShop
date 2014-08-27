@@ -1,10 +1,3 @@
 MedShop
 =======
-testing
-
-changes
-
-more
-
-
-more changes
+Create a Folder here and add the codes with the soln.
