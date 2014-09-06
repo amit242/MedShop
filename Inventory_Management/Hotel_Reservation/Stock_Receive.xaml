@@ -1,0 +1,27 @@
+﻿<Window x:Class="Inventory_Management.Stock_Receive"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Stock_Receive" Height="500" Width="500">
+    <Grid>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="105,38,0,0" Name="textBoxItemNo" VerticalAlignment="Top" Width="97" FontSize="10" />
+        <Label Content="Item Number:" Height="23" HorizontalAlignment="Left" Margin="12,38,0,0" Name="label2" VerticalAlignment="Top" FontSize="10" Width="78" />
+        <Label Content="Category:" FontSize="10" Height="23" HorizontalAlignment="Left" Margin="12,67,0,0" Name="label8" VerticalAlignment="Top" Width="78" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="105,67,0,0" Name="comboBoxCategory" 
+                  VerticalAlignment="Top" Width="134" ItemsSource="{Binding TheList}" />
+        <Label Content="Vendor:" FontSize="10" Height="23" HorizontalAlignment="Left" Margin="12,125,0,0" Name="label10" VerticalAlignment="Top" Width="78" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="105,125,0,0" Name="comboBoxVendor" VerticalAlignment="Top" Width="134" />
+        <Label Content="Stock Levels:" FontSize="10" Height="23" HorizontalAlignment="Left" Margin="12,157,0,0" Name="label11" VerticalAlignment="Top" Width="78" />
+        <DataGrid AutoGenerateColumns="True" Height="207" HorizontalAlignment="Left" Margin="12,176,0,0" Name="dataGrid1" VerticalAlignment="Top" Width="454" SelectionChanged="dataGrid1_SelectionChanged" />
+        <Label Content="Location:" FontSize="10" Height="23" HorizontalAlignment="Left" Margin="12,389,0,0" Name="label12" VerticalAlignment="Top" Width="60" />
+        <TextBox FontSize="10" Height="23" HorizontalAlignment="Left" Margin="301,389,0,0" Name="textBoxQtyReceived" VerticalAlignment="Top" Width="69" />
+        <Label Content="Quantity Received:" FontSize="10" Height="23" HorizontalAlignment="Left" Margin="212,389,0,0" Name="label13" VerticalAlignment="Top" Width="91" />
+        <Button Content="Update Stock Level" Height="23" HorizontalAlignment="Left" Margin="105,426,0,0" Name="buttonOK" VerticalAlignment="Top" Width="120" />
+        <Label Content="Location:" FontSize="10" Height="23" HorizontalAlignment="Left" Margin="12,96,0,0" Name="label6" VerticalAlignment="Top" Width="78" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="105,96,0,0" Name="comboBoxLocation" VerticalAlignment="Top" Width="134" />
+        <Button Content="Start Search" Height="23" HorizontalAlignment="Left" Margin="295,82,0,0" Name="buttonStartSearch" VerticalAlignment="Top" Width="75" Click="buttonStartSearch_Click" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="61,389,0,0" Name="comboBoxChooseLocation" VerticalAlignment="Top" Width="97" />
+        <Button Content="Close" Height="23" HorizontalAlignment="Left" Margin="284,426,0,0" Name="buttonClose" VerticalAlignment="Top" Width="86" Click="buttonClose_Click" />
+        <TextBlock Height="32" HorizontalAlignment="Left" Name="textBlock1" TextWrapping="WrapWithOverflow"
+                   Text=" Instructons - To receive stock select the item, location, enter the quantity and press Update Stock Level" VerticalAlignment="Top" Width="478" />
+    </Grid>
+</Window>

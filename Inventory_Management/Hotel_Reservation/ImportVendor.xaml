@@ -1,0 +1,14 @@
+﻿<Window x:Class="Inventory_Management.ImportVendor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ImportVendor" Height="400" Width="500">
+    <Grid>
+        <Button Content="Import Vendor from xls" Height="23" HorizontalAlignment="Left" Margin="12,326,0,0" Name="buttonImportVendor" VerticalAlignment="Top" Width="145" />
+        <DataGrid AutoGenerateColumns="True" Height="202" HorizontalAlignment="Left" Margin="12,0,0,41" Name="dataGrid1" VerticalAlignment="Bottom" Width="454" />
+        <Button Content="Close" Height="23" HorizontalAlignment="Left" Margin="391,326,0,0" Name="buttonClose" VerticalAlignment="Top" Width="75" Click="buttonClose_Click" />
+        <Button Content="Choose File" Height="23" HorizontalAlignment="Left" Margin="12,50,0,0" Name="buttonChooseFile" VerticalAlignment="Top" Width="75" Click="buttonChooseFile_Click" />
+        <Button Content="Load Xls File" Height="23" HorizontalAlignment="Left" Margin="12,79,0,0" Name="buttonLoadFile" VerticalAlignment="Top" Width="75" Click="buttonLoadFile_Click" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="109,50,0,0" Name="textBox_path" VerticalAlignment="Top" Width="357" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="109,80,0,0" Name="textBox_sheet" VerticalAlignment="Top" Width="357" />
+    </Grid>
+</Window>

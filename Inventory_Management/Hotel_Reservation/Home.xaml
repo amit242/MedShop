@@ -1,0 +1,18 @@
+﻿<Window x:Class="Inventory_Management.Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:bms="clr-namespace:Inventory_Management.View"
+        Title="Home" Height="500" Width="650" Loaded="Window_Loaded">
+    <Grid>
+        <bms:BaseMaster/>
+        <Image Height="263" Margin="12,167,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Source="./Resources/IMS.jpg" HorizontalAlignment="Left" Width="298" />
+
+        <TextBlock Height="20" HorizontalAlignment="Left" Margin="12,132,0,0" x:Name="WelcomeHeading" Text="Welcome:" 
+                   VerticalAlignment="Top" Width="100" FontFamily="Goudy Stout" FontSize="10" TextAlignment="Center" 
+                   TextWrapping="Wrap" Background="Honeydew" Foreground="Red"/>
+        <TextBlock Height="20" HorizontalAlignment="Left" Margin="120,132,0,0" x:Name="TextBlockWelcome"  
+                   VerticalAlignment="Top" FontFamily="Goudy Stout" FontSize="10" FontStretch="ExtraCondensed" 
+                   Background="Honeydew" Foreground="Red" Width="500" TextBlock.TextAlignment="Left"/>
+        <Image Height="263" HorizontalAlignment="Left" Margin="318,167,0,0" Name="image2" Source="./Resources/Warehouse.jpg" Stretch="Fill" VerticalAlignment="Top" Width="298" />
+    </Grid>
+</Window>

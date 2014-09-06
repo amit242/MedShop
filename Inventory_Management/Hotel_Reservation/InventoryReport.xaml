@@ -1,0 +1,23 @@
+﻿<Window x:Class="Inventory_Management.InventoryReport"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="InventoryReport" Height="450" Width="700" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" xmlns:chartingToolkit="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit">
+    <Grid>
+        <Grid Height="387" HorizontalAlignment="Left" Margin="12,12,0,0" Name="grid1" VerticalAlignment="Top" Width="666">
+            
+            <Label Content="Inventory Report" Height="28" Margin="274,6,228,0" Name="label1" VerticalAlignment="Top" FontWeight="Bold" FontStretch="Expanded" Grid.ColumnSpan="2" />
+            <Image Height="47" HorizontalAlignment="Left" Margin="6,28,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="58" 
+                   Source="/Resources/Reports.jpg"/>
+            <TextBlock Height="40" HorizontalAlignment="Left" Margin="70,28,0,0" Name="textBlock1" 
+                       Text="Instructions - You are currently viewing your Itemwise Inventory Reports." 
+                       VerticalAlignment="Top" Width="515" MaxWidth="1000" TextWrapping="WrapWithOverflow" Grid.ColumnSpan="2" />
+            <Button Content="Print" Height="23" HorizontalAlignment="Left" Margin="420,358,0,0" Name="buttonPrintInvoice" VerticalAlignment="Top" Width="75" />
+            <Label Content="Print To:" Height="28" Margin="70,358,198,0" Name="label4" VerticalAlignment="Top" />
+            <ComboBox Height="23" HorizontalAlignment="Left" Margin="169,359,0,0" Name="comboBox1" VerticalAlignment="Top" Width="75" />
+            <chartingToolkit:Chart DataContext="1,10 2,20 3,30 4,40" HorizontalAlignment="Left" Margin="70,82,0,0" Title="Itemwise Inventory Report" VerticalAlignment="Top" Width="530" Height="247">
+                <chartingToolkit:ColumnSeries DependentValuePath="X" IndependentValuePath="Y" ItemsSource="{Binding}" />
+            </chartingToolkit:Chart>
+        </Grid>
+        
+    </Grid>
+</Window>

@@ -1,0 +1,19 @@
+﻿<Window x:Class="Inventory_Management.VendorFind"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="VendorFind" Height="350" Width="500">
+    <Grid>
+        <Label Content="First Name:" FontSize="8" Height="20" HorizontalAlignment="Left" Margin="12,12,0,0" Name="label3" VerticalAlignment="Top" Width="54" />
+        <TextBox FontSize="8" Height="20" HorizontalAlignment="Left" Margin="79,12,0,0" Name="textBoxFirstName" VerticalAlignment="Top" Width="131" />
+        <Label Content="Last Name:" FontSize="8" Height="20" HorizontalAlignment="Left" Margin="12,39,0,0" Name="label4" VerticalAlignment="Top" />
+        <TextBox FontSize="8" Height="20" HorizontalAlignment="Left" Margin="79,39,0,0" Name="textBoxLastName" VerticalAlignment="Top" Width="131" />
+        <Label Content="Business Name:" FontSize="8" Height="20" HorizontalAlignment="Left" Margin="12,65,0,0" Name="label6" VerticalAlignment="Top" Width="66" />
+        <TextBox FontSize="8" Height="20" HorizontalAlignment="Left" Margin="79,66,0,0" Name="textBoxBusinessName" VerticalAlignment="Top" Width="131" />
+        <Button Content="StartSearch" Height="23" HorizontalAlignment="Left" Margin="12,281,0,0" Name="buttonStartSearch" VerticalAlignment="Top" Width="112" Click="buttonStartSearch_Click" />
+        <Button Content="Close" Height="23" HorizontalAlignment="Left" Margin="354,281,0,0" Name="buttonClose" VerticalAlignment="Top" Width="112" Click="buttonClose_Click" />
+        <DataGrid AutoGenerateColumns="True" Height="149" HorizontalAlignment="Left" Margin="12,126,0,0" 
+                  Name="dataGrid1" VerticalAlignment="Top" Width="454" AlternatingRowBackground="Aqua"/>
+        <Label Content="Vendor Id:" FontSize="8" Height="20" HorizontalAlignment="Left" Margin="12,91,0,0" Name="label1" VerticalAlignment="Top" Width="66" />
+        <TextBox FontSize="8" Height="20" HorizontalAlignment="Left" Margin="79,92,0,0" Name="textBoxVendorId" VerticalAlignment="Top" Width="131" />
+    </Grid>
+</Window>

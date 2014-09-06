@@ -1,0 +1,28 @@
+﻿<Window x:Class="Inventory_Management.Report_Inventory"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        
+        xmlns:DV="clr-namespace:System.Windows.Controls.DataVisualization;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+        xmlns:DVC="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+        
+        Title="Report_Inventory" Height="450" Width="600" >
+    <Grid>
+        <Label Content="Itemwise Inventory Report" Height="28" Margin="214,6,198,0" Name="label1" VerticalAlignment="Top" FontWeight="Bold" FontStretch="Expanded"/>
+        <Image Height="47" HorizontalAlignment="Left" Margin="6,28,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="58" 
+                   Source="./Resources/Reports.jpg"/>
+        <TextBlock Height="40" HorizontalAlignment="Left" Margin="70,28,0,0" Name="textBlock1" 
+                       Text="Instructions - You are currently viewing your Itemwise Inventory Report." 
+                       VerticalAlignment="Top" Width="496" MaxWidth="1000" TextWrapping="WrapWithOverflow"/>
+        <Button Content="Print" Height="23" HorizontalAlignment="Left" Margin="305,376,0,0" Name="buttonPrintInvoice" VerticalAlignment="Top" Width="75" Click="buttonPrintInvoice_Click" />
+        <Label Content="Print To:" Height="28" Margin="41,375,0,0" Name="label4" VerticalAlignment="Top" HorizontalAlignment="Left" Width="62" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="109,376,0,0" Name="comboBox1" VerticalAlignment="Top" Width="104" />
+        <DVC:Chart Name="MyChart" Width="500" Background="YellowGreen" Margin="39,81,39,45">
+            <DVC:Chart.Series>
+                <DVC:ColumnSeries Title="Stock Level" IndependentValueBinding="{Binding Path=TheText}" DependentValueBinding="{Binding Path=TheValue}"
+                               ItemsSource="{Binding TheList}">
+                </DVC:ColumnSeries>
+            </DVC:Chart.Series>
+        </DVC:Chart>
+        <Button Content="Close" Height="23" HorizontalAlignment="Left" Margin="464,376,0,0" Name="buttonClose" VerticalAlignment="Top" Width="75" Click="buttonClose_Click" />
+    </Grid>
+</Window>

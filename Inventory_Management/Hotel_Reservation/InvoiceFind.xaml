@@ -1,0 +1,20 @@
+﻿<Window x:Class="Inventory_Management.InvoiceFind"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="InvoiceFind" Height="350" Width="500">
+    <Grid>
+        <Label Content="Invoice No:" FontSize="8" Height="20" HorizontalAlignment="Left" Margin="12,12,0,0" Name="label3" VerticalAlignment="Top" Width="54" />
+        <TextBox FontSize="8" Height="20" HorizontalAlignment="Left" Margin="79,12,0,0" Name="textBoxInvoiceNo" VerticalAlignment="Top" Width="131" />
+        <Label Content="Invoice Date Range:" FontSize="8" Height="28" HorizontalAlignment="Left" Margin="12,39,0,0" Name="label4" VerticalAlignment="Top" Width="91" />
+        <Button Content="StartSearch" Height="23" HorizontalAlignment="Left" Margin="12,281,0,0" Name="buttonStartSearch" VerticalAlignment="Top" Width="112" Click="buttonStartSearch_Click" />
+        <Button Content="Close" Height="23" HorizontalAlignment="Left" Margin="354,281,0,0" Name="buttonClose" VerticalAlignment="Top" Width="112" Click="buttonClose_Click" />
+        <DataGrid AutoGenerateColumns="True" Height="184" HorizontalAlignment="Left" Margin="12,91,0,0" 
+                  Name="dataGrid1" VerticalAlignment="Top" Width="454" AlternatingRowBackground="Aqua"/>
+        <DatePicker Height="20" HorizontalAlignment="Left" Margin="79,65,0,0" Name="datePickerInvoiceFrom" VerticalAlignment="Top" Width="131" FontSize="8"/>
+        <Label Content="From:" FontSize="8" Height="20" HorizontalAlignment="Left" Margin="36,64,0,0" Name="label1" VerticalAlignment="Top" />
+        <DatePicker FontSize="8" Height="20" HorizontalAlignment="Left" Margin="298,64,0,0" Name="datePickerInvoiceTo" VerticalAlignment="Top" Width="131" />
+        <Label Content="To:" FontSize="8" Height="20" HorizontalAlignment="Left" Margin="271,63,0,0" Name="label2" VerticalAlignment="Top" />
+        <Label Content="Customer No:" FontSize="8" Height="20" HorizontalAlignment="Left" Margin="231,12,0,0" Name="label5" VerticalAlignment="Top" Width="61" />
+        <TextBox FontSize="8" Height="20" HorizontalAlignment="Left" Margin="298,12,0,0" Name="textBoxCustomerNo" VerticalAlignment="Top" Width="131" />
+    </Grid>
+</Window>

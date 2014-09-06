@@ -1,0 +1,26 @@
+﻿<Window x:Class="Inventory_Management.ConfigurePaymentMethod"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ConfigurePaymentMethod" Height="300" Width="420">
+    <Grid>
+        <Label Content="Instructions - Configure the payment methods available for customers." Height="28" HorizontalAlignment="Left" Name="label1" VerticalAlignment="Top" Width="398" />
+        <ListBox Height="144" HorizontalAlignment="Left" Margin="12,80,0,0" Name="listBoxPayMethod" 
+                 VerticalAlignment="Top" Width="152" ItemsSource="{Binding TheList}" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="100" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding TheText}" />
+                     </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="12,51,0,0" Name="textBoxAddPayMethod" VerticalAlignment="Top" Width="97" />
+        <Button Content="Add" Height="23" HorizontalAlignment="Left" Margin="124,51,0,0" Name="buttonAddPayMethod" VerticalAlignment="Top" Width="59" Click="buttonAddPayMethod_Click" />
+        <Button Content="Remove" Height="23" HorizontalAlignment="Left" Margin="191,51,0,0" Name="buttonRemovePayMethod" VerticalAlignment="Top" Width="66" Click="buttonRemovePayMethod_Click" />
+        <Button Content="Close" Height="23" HorizontalAlignment="Left" Margin="166,226,0,0" Name="buttonCloseCPMWindow" VerticalAlignment="Top" Width="75" Click="buttonCloseCPMWindow_Click" />
+    </Grid>
+</Window>

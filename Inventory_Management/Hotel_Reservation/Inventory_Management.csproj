@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{31E72FD0-FEC9-43AC-ADDB-47DF11151781}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Inventory_Management</RootNamespace>
+    <AssemblyName>Hotel_Reservation</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug1\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DynamicDataDisplay">
+      <HintPath>..\..\DynamicDataDisplay.Controls\DynamicDataDisplay.dll</HintPath>
+    </Reference>
+    <Reference Include="DynamicDataDisplay.Coastline">
+      <HintPath>..\..\DynamicDataDisplay.Coastline\DynamicDataDisplay.Coastline.dll</HintPath>
+    </Reference>
+    <Reference Include="DynamicDataDisplay.Controls">
+      <HintPath>..\..\DynamicDataDisplay.Controls\DynamicDataDisplay.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="DynamicDataDisplay.Maps">
+      <HintPath>..\..\DynamicDataDisplay.Maps\DynamicDataDisplay.Maps.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelLibrary">
+      <HintPath>..\..\..\ExcelLibrary_20110730\ExcelLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Controls.DataVisualization.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Xceed.Wpf.AvalonDock">
+      <HintPath>..\..\..\Extended WPF Toolkit Binaries\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero">
+      <HintPath>..\..\..\Extended WPF Toolkit Binaries\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro">
+      <HintPath>..\..\..\Extended WPF Toolkit Binaries\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010">
+      <HintPath>..\..\..\Extended WPF Toolkit Binaries\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.DataGrid">
+      <HintPath>..\..\..\Extended WPF Toolkit Binaries\Xceed.Wpf.DataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit">
+      <HintPath>..\..\..\Extended WPF Toolkit Binaries\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AddOrderItem.xaml.cs">
+      <DependentUpon>AddOrderItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddOrderItemInvoice.xaml.cs">
+      <DependentUpon>AddOrderItemInvoice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurePaymentMethod.xaml.cs">
+      <DependentUpon>ConfigurePaymentMethod.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigureWarehouse.xaml.cs">
+      <DependentUpon>ConfigureWarehouse.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerAdd.xaml.cs">
+      <DependentUpon>CustomerAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerSearch.xaml.cs">
+      <DependentUpon>CustomerSearch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerShow.xaml.cs">
+      <DependentUpon>CustomerShow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerFind.xaml.cs">
+      <DependentUpon>CustomerFind.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExportInvoice.xaml.cs">
+      <DependentUpon>ExportInvoice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExportVendor.xaml.cs">
+      <DependentUpon>ExportVendor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ImportVendor.xaml.cs">
+      <DependentUpon>ImportVendor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceFind.xaml.cs">
+      <DependentUpon>InvoiceFind.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewPO.xaml.cs">
+      <DependentUpon>NewPO.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OrderReceive.xaml.cs">
+      <DependentUpon>OrderReceive.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReorderNew.xaml.cs">
+      <DependentUpon>ReorderNew.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReorderShow.xaml.cs">
+      <DependentUpon>ReorderShow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Inventory.xaml.cs">
+      <DependentUpon>Report_Inventory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Show Inventory.xaml.cs">
+      <DependentUpon>Show Inventory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ItemAdd.xaml.cs">
+      <DependentUpon>ItemAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="inventoryDataSet.cs">
+      <DependentUpon>inventoryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="inventoryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>inventoryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceAdd.xaml.cs">
+      <DependentUpon>InvoiceAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceShow.xaml.cs">
+      <DependentUpon>InvoiceShow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigureItemCategory.xaml.cs">
+      <DependentUpon>ConfigureItemCategory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QuotationCreate.xaml.cs">
+      <DependentUpon>QuotationCreate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Registration.xaml.cs">
+      <DependentUpon>Registration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.xaml.cs">
+      <DependentUpon>Reports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShipTo.xaml.cs">
+      <DependentUpon>ShipTo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_Receive.xaml.cs">
+      <DependentUpon>Stock_Receive.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_Reduce.xaml.cs">
+      <DependentUpon>Stock_Reduce.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VendorAdd.xaml.cs">
+      <DependentUpon>VendorAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VendorFind.xaml.cs">
+      <DependentUpon>VendorFind.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VendorView.xaml.cs">
+      <DependentUpon>VendorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\BaseMaster.xaml.cs">
+      <DependentUpon>BaseMaster.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AddOrderItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddOrderItemInvoice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ConfigurePaymentMethod.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ConfigureWarehouse.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomerAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomerSearch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomerShow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomerFind.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExportInvoice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExportVendor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="ImportVendor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InvoiceFind.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NewPO.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrderReceive.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReorderNew.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReorderShow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Report_Inventory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Show Inventory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ItemAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InvoiceAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InvoiceShow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ConfigureItemCategory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QuotationCreate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Registration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShipTo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Stock_Receive.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Stock_Reduce.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VendorAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VendorFind.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VendorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\BaseMaster.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="inventoryDataSet.xsc">
+      <DependentUpon>inventoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="inventoryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>inventoryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="inventoryDataSet.xss">
+      <DependentUpon>inventoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Warehouse.jpg" />
+    <Resource Include="Resources\IMS.jpg" />
+    <Resource Include="Resources\Inventory.jpg" />
+    <Resource Include="Resources\Invoice.jpg" />
+    <Resource Include="Resources\Customer.png" />
+    <Resource Include="Resources\Calendar.jpg" />
+    <Resource Include="Resources\Calendar.png" />
+    <Resource Include="Resources\copy.png" />
+    <Resource Include="Resources\cut.png" />
+    <Resource Include="Resources\Hotel.jpg" />
+    <Resource Include="Resources\Logout.jpg" />
+    <Resource Include="Resources\paste.png" />
+    <Resource Include="Resources\Reports.jpg" />
+    <Resource Include="Resources\Reservation.jpg" />
+    <Resource Include="Resources\Search.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Show_Invoice.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Logout1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Logout2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\PO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBA">
+      <Guid>{000204EF-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>6</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>9</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

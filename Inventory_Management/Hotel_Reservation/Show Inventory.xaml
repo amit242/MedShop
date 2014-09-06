@@ -1,0 +1,24 @@
+﻿<Window x:Class="Inventory_Management.Inventory"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:bms="clr-namespace:Inventory_Management.View"
+        Title="Inventory" Height="500" Width="650">
+    <Grid>
+        <bms:BaseMaster/>
+        <Grid Height="338" HorizontalAlignment="Left" Margin="12,111,0,0" Name="grid1" VerticalAlignment="Top" Width="604">
+            <Label Content=" Inventory" Height="28" Margin="265,6,237,0" Name="label1" VerticalAlignment="Top" FontWeight="Bold" FontStretch="Expanded"/>
+            <Image Height="47" HorizontalAlignment="Left" Margin="6,28,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="58" 
+                   Source="./Resources/Inventory.jpg"/>
+            <TextBlock Height="40" HorizontalAlignment="Left" Margin="70,28,0,0" Name="textBlock1" 
+                       Text="Instructions - You are currently viewing your Inventory. This includes all inventory items. To short by a column click it's title." 
+                       VerticalAlignment="Top" Width="515" MaxWidth="1000" TextWrapping="WrapWithOverflow"/>
+            <Label Content="Price List:" Height="28" Margin="70,69,467,0" Name="label2" VerticalAlignment="Top" />
+            <ComboBox Height="23" HorizontalAlignment="Left" Margin="143,74,0,0" Name="comboBox1" VerticalAlignment="Top" Width="143" />
+            <DataGrid AutoGenerateColumns="True" Height="166" HorizontalAlignment="Left" Margin="6,112,0,0" Name="dataGrid1" VerticalAlignment="Top" Width="579" />
+            <Button Content="New Item" Height="23" HorizontalAlignment="Left" Margin="6,300,0,0" Name="buttonNewItem" VerticalAlignment="Top" Width="75" />
+            <Button Content="View/Edit Item" Height="23" HorizontalAlignment="Left" Margin="118,300,0,0" Name="buttonViewEditItem" VerticalAlignment="Top" Width="75" />
+            <Button Content="Duplicate Item" Height="23" HorizontalAlignment="Left" Margin="227,300,0,0" Name="buttonDuplicateItem" VerticalAlignment="Top" Width="105" />
+            <Button Content="Delete Item(s)" Height="23" HorizontalAlignment="Left" Margin="363,300,0,0" Name="buttonDeleteItems" VerticalAlignment="Top" Width="97" />
+        </Grid>
+    </Grid>
+</Window>
